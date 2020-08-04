@@ -25,9 +25,27 @@ docker run -it --rm networkstatic/nflow-generator -t <ip> -p <port>
 You can download the Linux binary here [nflow-generator-x86_64-linux](https://github.com/nerdalert/nflow-generator/blob/master/binaries/nflow-generator-x86_64-linux).
 ### Build
 
-Install [Go](http://golang.org/doc/install), then:
+Install supporting packages:
 
-	git clone https://github.com/nerdalert/nflow-generator.git 
+  On Linux:
+    sudo apt-get -y install golang-go
+    sudo apt-get -y install gccgo-go
+    sudo apt-get install golang
+    
+  On Mac:
+    brew install go
+    or (if you already have Go)
+    brew upgrade go
+
+  Install GoFlags:
+  go get github.com/jessevdk/go-flags
+
+
+  More insfo about installing Go is [here](http://golang.org/doc/install):
+
+  Install NflowGen:
+
+	git clone https://github.com/tal26/nflow-generator-1.git 
 	cd <dir>
 	go build
 
